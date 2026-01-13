@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "!=== Анализатор интернет-соединения ===!"
+echo "==== Анализатор интернет-соединения ===="
 echo "1.DNS"
 nslookup google.com | grep "Address"
 echo ""
