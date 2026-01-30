@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo "==== Анализатор интернет-соединения ===="
-echo "1.DNS"
+echo "Проверка интернет-соединения"
+echo "1.Смотрим DNS"
 nslookup google.com | grep "Address"
 echo ""
-echo "2. Проверяем связь с Яндекс..."
+echo "2. Проверяем связь с Яндекс"
 ping -c 3 yandex.ru | grep "time"
 echo ""
-echo "3. Смотрим открытые порты..."
+echo "3. Смотрим открытые порты"
 ss -tunp | head -10
 echo ""
-echo "4. Проверяем маршрут до Google..."
+echo "4. Проверяем маршрут до Гугла"
 traceroute -n google.com -m 5
